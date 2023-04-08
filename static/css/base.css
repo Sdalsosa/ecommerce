@@ -1,0 +1,151 @@
+html {
+    height: 100%;
+    background-color: #222;
+    color: white;
+}
+
+body {
+    background: url('/media/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    font-family: 'Poppins';
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: white;
+    color: black !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.text-neon-pink {
+    color: #fff;
+    text-shadow:
+      0 0 3px #fff,
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #bc13fe,
+      0 0 40px #bc13fe,
+      0 0 70px #bc13fe,
+      0 0 100px #bc13fe,
+      0 0 121px #bc13fe;
+}
+
+.text-neon-red {
+    color: #ffffff;
+    text-shadow:
+      0 0 3px #fff,
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #f31655,
+      0 0 40px #f31655,
+      0 0 70px #f31655,
+      0 0 100px #f31655,
+      0 0 121px #f31655;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.border-neon {
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 2rem #bc13fe,
+                0 0 0.8rem #bc13fe,
+                0 0 2.8rem #bc13fe,
+                inset 0 0 1.3rem #bc13fe;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+@media (max-width: 600px), (max-height: 800px) {
+    .logo-font {
+    font-size: 2rem;
+    }
+
+    .shop-now-button {
+        scale: 75%;
+    }
+
+    .fas, .fas p {
+        scale: 75%;
+    }
+}
+
+@media (max-width: 250px) {
+    .logo-font {
+    font-size: 1rem;
+    }
+
+    .shop-now-button {
+        scale: 50%;
+        }
+}
+
+@media screen and (prefers-reduced-motion) { 
+    .border-neon {
+      animation: none;
+    }
+  }
