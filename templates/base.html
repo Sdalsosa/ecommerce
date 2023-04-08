@@ -32,21 +32,31 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Neon Earth {% block extra_title %}{% endblock %}</title>
+    <title>Neon Mind {% block extra_title %}{% endblock %}</title>
   </head>
 
   <body>
-    <!-- ****** Header Section ****** -->
-    <header>
-    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Welcome to NEON MIND</h1>
+            </div>
+        </div>
+    </div>
 
     {% if messages %}
     {% endif %}
 
     {% block page_header %}
+        <!-- ****** Header Section ****** -->
+        <header >
+
+        </header>
     {% endblock %}
 
     {% block content %}
+
     {% endblock %}
 
 
