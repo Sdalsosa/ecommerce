@@ -6,8 +6,9 @@ html {
 body {
     background: url('/media/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
     font-family: 'Poppins';
+    height: 100vh;
+    overflow: hidden;
 }
 
 a {
@@ -126,8 +127,8 @@ a {
 
 @media (max-width: 600px), (max-height: 800px) {
     .logo-font {
-    font-size: 2rem;
-    }
+        font-size: 2rem;
+        }
 
     .shop-now-button {
         scale: 75%;
