@@ -7,8 +7,6 @@ body {
     background: url('/media/background.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Poppins';
-    height: 100vh;
-    overflow: hidden;
 }
 
 a {
@@ -37,6 +35,11 @@ a {
 .dropdown-menu a:hover {
     background-color: transparent;
     color: #de9cf8 !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
 }
 
 .logo-font {
@@ -78,12 +81,26 @@ a {
       0 0 3px #fff,
       0 0 5px #fff,
       0 0 10px #fff,
-      0 0 20px #bc13fe,
-      0 0 40px #bc13fe,
-      0 0 70px #bc13fe,
-      0 0 100px #bc13fe,
-      0 0 121px #bc13fe;
+      0 0 15px #be20fc,
+      0 0 20px #be20fc,
+      0 0 30px #be20fc,
+      0 0 50px #be20fc,
+      0 0 80px #be20fc;
 }
+
+.heart-neon-pink {
+    color: #ffffff;
+    text-shadow:
+      0 0 3px #ffffff,
+      0 0 5px #ffffff,
+      0 0 10px #be20fc,
+      0 0 20px #be20fc,
+      0 0 40px #be20fc,
+      0 0 70px #be20fc,
+      0 0 140px #be20fc,
+      0 0 200px #be20fc;
+}
+
 
 .border-black {
     border: 1px solid #2a2a2a !important;
@@ -92,15 +109,25 @@ a {
 .border-neon {
     border: 0.2rem solid #fff;
     border-radius: 2rem;
-    padding: 0.4em;
     box-shadow: 0 0 .2rem #fff,
                 0 0 .2rem #fff,
-                0 0 2rem #bc13fe,
-                0 0 0.8rem #bc13fe,
-                0 0 2.8rem #bc13fe,
-                inset 0 0 1.3rem #bc13fe;
+                0 0 2rem #be20fc,
+                0 0 0.8rem #be20fc,
+                0 0 2.8rem #be20fc,
+                inset 0 0 1.3rem #be20fc;
 }
 
+.home-container {
+    height : 80vh ;
+}
+
+.darker-bg {
+    background-color: #2a2a2a;
+}
+
+.prints-container {
+    margin-top: 0 !important;
+    }
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -137,6 +164,19 @@ a {
     .fas, .fas p {
         scale: 75%;
     }
+}
+
+@media (max-width: 991px) {
+    .header-container {
+        margin-top: 116px !important;
+        }
+}
+
+@media (max-width: 300px) {
+    .narrow-screen-text {
+        font-size: 1rem;
+        justify-content: center;
+        }
 }
 
 @media (max-width: 250px) {

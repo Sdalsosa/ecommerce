@@ -28,7 +28,8 @@ class Print(models.Model):
                                 validators=[MinValueValidator(0)],)
     reprint = models.IntegerField(default=3, 
                                   validators=[MinValueValidator(0)],)
-    likes = models.ManyToManyField(User, related_name='print_likes')
+    likes = models.ManyToManyField(User, blank=True, 
+                                   related_name='print_likes')
 
     def __str__(self):
         return self.name

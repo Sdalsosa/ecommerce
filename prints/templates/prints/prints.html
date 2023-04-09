@@ -10,10 +10,46 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col text-white">
-                {{ prints }}
+<div class="container-fluid">
+    <div class="row">
+        <div class="product-container col-10 offset-1">
+            <div class="row mt-1 mb-2"></div>
+            <div class="row">
+                {% for print in prints %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
+                        <div class="card h-100 border-neon rounded-0">
+                            {% if print.image %}
+                            <a href="{% url 'single_print' print.pk %}">
+                                <img class="card-img-top img-fluid" src="{{ print.image.url }}" alt="{{ print.name }}">
+                            </a>
+                            {% else %}
+                            <a href="{% url 'single_print' print.pk %}">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ print.name }}">
+                            </a>
+                            {% endif %}
+                            <div class="card-body darker-bg font-weight-bold text-center pb-0">
+                                <p class="lead text-neon-pink mb-4">{{ print.name }}</p>
+                            </div>
+                            <div class="card-footer darker-bg pt-0 border-0 text-left">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="narrow-screen-text lead mb-0 text-white text-left font-weight-bold">€{{ print.price }}</p> 
+                                    </div>
+                                    <div class="col">
+                                        <p class="lead mb-0 text-right text-white font-weight-bold">
+                                            {% if print.likes_count %}
+                                                <small class="font-weight-bold"></i>{{ print.likes_count }}</small>
+                                            {% else %}
+                                                <small class="font-weight-bold">0</small>
+                                            {% endif %}
+                                            <i class="fa fa-heart heart-neon-pink ml-1" aria-hidden="true"></i>
+                                        </p> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
