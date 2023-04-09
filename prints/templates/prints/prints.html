@@ -37,8 +37,8 @@
                                     </div>
                                     <div class="col">
                                         <p class="lead mb-0 text-right text-white font-weight-bold">
-                                            {% if print.likes_count %}
-                                                <small class="font-weight-bold"></i>{{ print.likes_count }}</small>
+                                            {% if print.likes %}
+                                                <small class="font-weight-bold"></i>{{ print.likes.count }}</small>
                                             {% else %}
                                                 <small class="font-weight-bold">0</small>
                                             {% endif %}

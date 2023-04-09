@@ -7,19 +7,42 @@ from .models import Print
 def prints(request):
     """ A view to show all prints """
     prints = Print.objects.all()
+    query = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                prints = prints.annotate(lower_name=Lower('name'))
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            prints = prints.order_by(sortkey)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
                 messages.error(reqiest, "Please enter a proper search word")
                 return redirect(reverse('prints'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                        description__icontains=query)
             prints = prints.filter(queries)
 
-    context = {'prints': prints, 'search_term': query, }
-    
+    current_sorting = f'{sort}_{direction}'
+
+    context = {
+        'prints': prints,
+        'search_term': query,
+        'current_sorting': current_sorting,
+    }
+
     return render(request, 'prints/prints.html', context)
 
 
