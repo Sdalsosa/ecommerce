@@ -33,7 +33,14 @@
                             <div class="card-footer darker-bg pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
-                                        <p class="narrow-screen-text lead mb-0 text-white text-left font-weight-bold">€{{ print.price }}</p> 
+                                        <p class="narrow-screen-text lead mb-0 text-white text-left font-weight-bold">€{{ print.price }}</p>
+                                        {% if print.category %}
+                                        <p class="small mt-1 mb-0">
+                                            <a class="text-white" href="{% url 'prints' %}?category={{ print.category.name }}">
+                                                <i class="fas fa-tag mr-1"></i>{{ print.category.name }}
+                                            </a>
+                                        </p>
+                                        {% endif %}
                                     </div>
                                     <div class="col">
                                         <p class="lead mb-0 text-right text-white font-weight-bold">

@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
 from django.db.models import Q
 from .models import Print
+from django.db.models import Count
 
 
 def prints(request):
@@ -15,7 +16,10 @@ def prints(request):
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
-            if sortkey == 'name':
+            if sortkey == 'likes':
+                prints = prints.annotate(
+                        likes_count=Count('likes')).order_by('-likes_count')
+            elif sortkey == 'name':
                 sortkey = 'lower_name'
                 prints = prints.annotate(lower_name=Lower('name'))
 
@@ -23,7 +27,7 @@ def prints(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            prints = prints.order_by(sortkey)
+                prints = prints.order_by(sortkey)
 
         if 'q' in request.GET:
             query = request.GET['q']

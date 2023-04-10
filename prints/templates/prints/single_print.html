@@ -32,12 +32,19 @@
                 <p class="lead mb-4 text-center fs-1 text-neon-pink">{{ print.name }}</p>
                 <div class="row">
                     <div class="col">
-                        <p class="narrow-screen-text lead mb-0 text-white text-left font-weight-bold">€{{ print.price }}</p> 
+                        <p class="narrow-screen-text lead mb-0 text-white text-left font-weight-bold">€{{ print.price }}</p>
+                        {% if print.category %}
+                            <p class="small mt-1 mb-0">
+                                <a class="text-white" href="{% url 'prints' %}?category={{ print.category.name }}">
+                                    <i class="fas fa-tag mr-1"></i>{{ print.category.name }}
+                                </a>
+                            </p>
+                        {% endif %}
                     </div>
                     <div class="col">
                         <p class="lead mb-0 text-right text-white font-weight-bold">
-                            {% if print.likes_count %}
-                                <small class="font-weight-bold"></i>{{ print.likes_count }}</small>
+                            {% if print.likes %}
+                                <small class="font-weight-bold"></i>{{ print.likes.count }}</small>
                             {% else %}
                                 <small class="font-weight-bold">0</small>
                             {% endif %}
