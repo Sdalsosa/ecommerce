@@ -8,7 +8,6 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = "Categories"
-        
     name = models.CharField(max_length=254)
 
     def __str__(self):
@@ -17,9 +16,8 @@ class Category(models.Model):
 
 class Print(models.Model):
     name = models.CharField(max_length=254)
-    category = models.ForeignKey('Category', null=True, 
-                                 on_delete=models.SET_NULL,
-                                 related_name='prints')
+    category = models.ForeignKey(Category, null=True, 
+                                 on_delete=models.SET_NULL)
     description = models.TextField()
     price = models.DecimalField(max_digits=7, decimal_places=2,
                                 validators=[MinValueValidator(0.00)],)

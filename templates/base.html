@@ -27,6 +27,7 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="{% static 'js/script.js' %}"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -35,7 +36,7 @@
     <title>Neon Dreams {% block extra_title %}{% endblock %}</title>
   </head>
   <body class="d-flex flex-column min-vh-100">
-    <header class="container-fluid fixed-top">
+    <header class="container">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -48,9 +49,7 @@
                         <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
                         <div class="input-group-append">
                             <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
+                                <span><i class="fas fa-search"></i></span>
                             </button>
                         </div>
                     </div>
@@ -96,7 +95,7 @@
             </div>
         </div>
         <div class="row">
-            <nav class="navbar navbar-expand-lg w-100">
+            <nav class="navbar navbar-expand-lg p-0 w-100 neg-margin">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">
                         <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
@@ -109,7 +108,22 @@
     </header>
 
     {% if messages %}
-        <div class="message-container"></div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="no-bg modal-dialog" role="document">
+          <div class="no-bg modal-content">
+            <div class="card no-bg border-neon">
+                <img src="{% static 'images/error.png' %}" alt="">
+            </div>
+            <div class="modal-body no-bg ">
+                {% for message in messages %}
+                    <h3 class="text-white neg-margin text-center {{ message.tags }}">{{ message }}</h3>
+                {% endfor %}
+            </div>
+            <button type="btn" class="darker-bg text-neon-pink border-neon" data-dismiss="modal" aria-label="Close">Close</button>
+        </div>
+        </div>
+    </div>
+
     {% endif %}
 
     {% block page_header %}

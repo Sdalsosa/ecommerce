@@ -1,18 +1,25 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
 from django.db.models import Q
-from .models import Print
+from .models import Print, Category
 from django.db.models import Count
 
 
 def prints(request):
     """ A view to show all prints """
     prints = Print.objects.all()
+    categories = Category.objects.all()
     query = None
     sort = None
     direction = None
 
     if request.GET:
+
+        if 'category' in request.GET:
+            selection = request.GET['category'].split(',')
+            if 'all' not in selection:
+                prints = prints.filter(category__name__in=selection)
+                
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
@@ -32,7 +39,7 @@ def prints(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(reqiest, "Please enter a proper search word")
+                messages.error(request, "Please enter a proper search word")
                 return redirect(reverse('prints'))
 
             queries = Q(name__icontains=query) | Q(
@@ -45,6 +52,7 @@ def prints(request):
         'prints': prints,
         'search_term': query,
         'current_sorting': current_sorting,
+        'categories': categories,
     }
 
     return render(request, 'prints/prints.html', context)
