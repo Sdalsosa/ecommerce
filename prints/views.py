@@ -39,7 +39,7 @@ def prints(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.success(request, "Please enter a proper search word")
+                messages.error(request, "Please enter a proper search word")
                 return redirect(reverse('prints'))
 
             queries = Q(name__icontains=query) | Q(
