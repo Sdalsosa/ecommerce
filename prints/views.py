@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Print, Category
 from django.db.models import Count
+from django.db.models.functions import Lower
 
 
 def prints(request):

@@ -12,7 +12,7 @@ body {
 
 a {
     color: white;
-    text-decoration: none;
+    text-decoration: none !important;
   }
 
   a:hover {
@@ -69,12 +69,6 @@ i:hover {
 
 .main-logo-link {
     width: fit-content;
-}
-
-.shop-now-button {
-    background: #2a2a2a;
-    color: white;
-    min-width: 260px;
 }
 
 .card {
@@ -140,6 +134,35 @@ i:hover {
                 inset 0 0 1.3rem #be20fc;
 }
 
+.text-flicker {
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
+}
+
+  
+  @keyframes flicker {
+      
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #be20fc,
+        0 0 80px #be20fc,
+        0 0 90px #be20fc,
+        0 0 100px #be20fc,
+        0 0 150px #be20fc;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+
+
+
 .home-container {
     height : 80vh ;
 }
@@ -158,6 +181,18 @@ i:hover {
 
 .no-bullet {
     list-style-type: none !important;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
 }
 
 /* -------------------------------- Media Queries */
