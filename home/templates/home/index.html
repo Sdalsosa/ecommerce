@@ -2,24 +2,19 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
 {% endblock %}
 
 {% block content %}
     <div class="container home-container">
         <div class="row h-100">
             <div class="col-12 my-auto">
-                <h1 class="display-4 logo-font text-white">
+                <h1 class="display-4 logo-font text-center text-white">
                     Welcome to Neon Dreams
                 </h1>
-                <p class="text-white">Your home for neon art prints</p>
+                <p class="text-white text-center">Your home for neon art prints</p>
                 <div class="my-5">
-                    <h4>
-                        <a href="{% url 'prints' %}" class="shop-now-button border-neon btn btn-lg text-uppercase py-3 text-white">Start Shopping</a>
+                    <h4 class="text-center">
+                        <a href="{% url 'prints' %}" class="shop-now-button no-bg border-neon btn btn-lg text-uppercase py-3 text-neon-pink">Start Shopping</a>
                     </h4>
                 </div>
             </div>

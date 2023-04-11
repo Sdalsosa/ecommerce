@@ -26,6 +26,7 @@ i {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+    color: white;
 }
 
 i:hover {
@@ -55,7 +56,7 @@ i:hover {
 }
 
 .no-bg {
-    background-color: transparent;
+    background-color: transparent !important;
 }
 
 .neg-margin {
@@ -76,9 +77,13 @@ i:hover {
     min-width: 260px;
 }
 
-.btn-black {
-    background: #2a2a2a;
-    color: white;
+.card {
+    transition: transform 300ms linear;
+    transition-timing-function: ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .btn-cat {
@@ -182,7 +187,7 @@ i:hover {
 @media (max-width: 600px), (max-height: 800px) {
     .logo-font {
         font-size: 2rem;
-        }
+    }
 
     .shop-now-button {
         scale: 75%;
@@ -196,14 +201,30 @@ i:hover {
 @media (max-width: 991px) {
     .header-container {
         margin-top: 116px !important;
-        }
+    }
+    
+    .neg-margin {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .navbar {
+        scale: 75%;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar {
+        scale: 50%;
+    }
 }
 
 @media (max-width: 300px) {
     .narrow-screen-text {
         font-size: 1rem;
         justify-content: center;
-        }
+    }
 }
 
 @media (max-width: 250px) {
@@ -213,7 +234,7 @@ i:hover {
 
     .shop-now-button {
         scale: 50%;
-        }
+    }
 }
 
 @media screen and (prefers-reduced-motion) { 

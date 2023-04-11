@@ -46,9 +46,9 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'prints' %}">
                     <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                        <input class="form-control rounded-0" type="text" name="q" placeholder="Search our site">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                            <button class="form-control btn border-neon rounded-0" type="submit">
                                 <span><i class="fas fa-search"></i></span>
                             </button>
                         </div>
@@ -110,12 +110,16 @@
     {% if messages %}
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="no-bg modal-dialog" role="document">
-          <div class="no-bg modal-content">
-            <div class="card no-bg border-neon">
-                <img src="{% static 'images/error.png' %}" alt="">
-            </div>
-            <div class="modal-body no-bg ">
+            <div class="no-bg modal-content">
                 {% for message in messages %}
+                    <div class="card no-bg border-neon">
+                        {% if message.tags == 'success' %}
+                            <img src="{% static 'images/success.png' %}" alt="">
+                        {% else %}
+                            <img src="{% static 'images/error.png' %}" alt="">
+                        {% endif %}
+                    </div>
+                    <div class="modal-body no-bg ">
                     <h3 class="text-white neg-margin text-center {{ message.tags }}">{{ message }}</h3>
                 {% endfor %}
             </div>
