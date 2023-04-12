@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django_archive',
     'home',
     'prints',
+    'cart',
 ]
 
 MIDDLEWARE = [

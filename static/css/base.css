@@ -15,10 +15,10 @@ a {
     text-decoration: none !important;
   }
 
-  a:hover {
+a:hover {
     color: #de9cf8;
 
-  }
+}
 
 i {
     align-items: center;
@@ -138,30 +138,27 @@ i:hover {
     animation: flicker 1.5s infinite alternate;
     color: #fff;
 }
-
   
-  @keyframes flicker {
-      
+@keyframes flicker {
+    
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
-  
-        text-shadow:
-        0 0 4px #fff,
-        0 0 11px #fff,
-        0 0 19px #fff,
-        0 0 40px #be20fc,
-        0 0 80px #be20fc,
-        0 0 90px #be20fc,
-        0 0 100px #be20fc,
-        0 0 150px #be20fc;
-    
+
+    text-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px #be20fc,
+    0 0 80px #be20fc,
+    0 0 90px #be20fc,
+    0 0 100px #be20fc,
+    0 0 150px #be20fc;
+
     }
-    
+
     20%, 24%, 55% {        
-        text-shadow: none;
+    text-shadow: none;
     }    
-  }
-
-
+}
 
 .home-container {
     height : 80vh ;
@@ -195,16 +192,39 @@ i:hover {
     cursor: pointer;
 }
 
-/* -------------------------------- Media Queries */
 
-/* Slightly larger container on xl screens */
+/* ------  Scrollbar Styling  ------  */
+
+/* ------  Works on Firefox  ------ */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #de9cf8 #be20fc;
+  }
+  
+  /* ------ Works on Chrome, Edge, and Safari ------ */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #be20fc;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #de9cf8;
+    border-radius: 20px;
+    border: 3px solid #be20fc;
+  }
+
+
+/* ------  Media Queries ------ */
+
 @media (min-width: 1200px) {
   .container {
     max-width: 80%;
   }
 }
 
-/* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
