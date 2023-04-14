@@ -14,7 +14,10 @@ def cart_content(request):
     else:
         delivery = 15
 
-    grand_total = delivery + total
+    if item_count == 0:
+        grand_total = 0
+    else:
+        grand_total = delivery + total
 
     context = {
         'cart_items': cart_items,

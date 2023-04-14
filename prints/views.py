@@ -4,6 +4,7 @@ from django.db.models import Q
 from .models import Print, Category
 from django.db.models import Count
 from django.db.models.functions import Lower
+from django.http import HttpResponseRedirect
 
 
 def prints(request):
@@ -41,7 +42,7 @@ def prints(request):
             query = request.GET['q']
             if not query:
                 messages.error(request, "Please enter a proper search word")
-                return redirect(reverse('prints'))
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
             queries = Q(name__icontains=query) | Q(
                         description__icontains=query)
