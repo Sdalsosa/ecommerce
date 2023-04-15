@@ -192,6 +192,9 @@ i:hover {
     cursor: pointer;
 }
 
+.quant-width {
+    width: 80px;
+}
 
 /* ------  Scrollbar Styling  ------  */
 
