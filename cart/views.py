@@ -10,9 +10,9 @@ def view_cart(request):
 def add_to_cart(request, pk):
     """ add print quantity to cart """
 
-    quant = int(request.POST.get('quantity'))
+    quant = int(request.POST.get('quant'))
     redirect_url = request.POST.get('redirect_url')
-    cart = request.session.get('bag', {})
+    cart = request.session.get('cart', {})
 
     if pk in list(cart.keys()):
         cart[pk] += quant
@@ -20,6 +20,5 @@ def add_to_cart(request, pk):
         cart[pk] = quant
 
     request.session['cart'] = cart
-    print(cart)
 
     return redirect(redirect_url)
