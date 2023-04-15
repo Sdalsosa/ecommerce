@@ -13,11 +13,67 @@
         </div>
 
         <div class="row">
-            <div class="col">
+            <div class="d-flex justify-content-center col">
                 {% if cart_prints %}
-                    <div class="table-responsive text-white rounded">
-                        {{ cart_prints }}
-                    </div>                      
+                    <div class="table-responsive bg-dark border-neon p-5 rounded w-50">
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-white text-center">
+                                <tr>
+                                    <th scope="col">Print</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Qty</th>
+                                    <th scope="col">Subtotal</th>
+                                </tr>
+                            </thead>
+
+                            {% for i in cart_prints %}
+                                <tr class="text-white text-center">
+                                    <td class="p-3 w-25">
+                                        <img class="img-fluid rounded" src="{{ i.print.image.url }}">
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0"><strong>{{ i.print.name }}</strong></p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">€{{ i.print.price }}</p>
+                                    </td>
+                                    <td class="py-3 w-25">
+                                        <p class="my-0">{{ i.quant }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">€{{ i.print.price }}</p>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td colspan="5" class="pt-5 text-white text-right">
+                                    <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
+                                    <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
+                                    <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+                                    {% if free_delivery_count > 0 %}
+                                        <h6>Add {{free_delivery_count}} more prints to get free delivery!</h6>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-right">
+                                    <a href="{% url 'prints' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase text-white ">Keep Shopping</span>
+                                    </a>
+                                    <a href="" class="btn btn-black rounded-0 btn-lg">
+                                        <span class="text-uppercase border-neon px-3 text-white">Secure Checkout</span>
+                                        <span class="icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>                     
                 {% else %}
                     <p class="lead text-white text-center mb-5">Your shopping cart is empty. <i class="fas fa-sad-cry"></i></p>
                     <a href="{% url 'prints' %}">

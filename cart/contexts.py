@@ -9,6 +9,7 @@ def cart_content(request):
     cart_prints = []
     total = 0
     print_count = 0
+    free_delivery_count = 0
     cart = request.session.get('cart', {})
 
     for id, quant in cart.items():
@@ -22,7 +23,7 @@ def cart_content(request):
         })
     
     if print_count > 5:
-        delivery = 20
+        delivery = 0
     else:
         delivery = 15
 
@@ -31,11 +32,17 @@ def cart_content(request):
     else:
         grand_total = delivery + total
 
+    if print_count < 5:
+        free_delivery_count = 5 - print_count
+    else:
+        free_delivery_count = 0
+
     context = {
         'cart_prints': cart_prints,
         'total': total,
         'print_count': print_count,
         'delivery': delivery,
+        'free_delivery_count': free_delivery_count,
         'grand_total': grand_total,
     }
 
