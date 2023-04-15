@@ -50,10 +50,10 @@
                                 <td colspan="5" class="pt-5 text-white text-right">
                                     <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if free_delivery_count > 0 %}
                                         <h6>Add {{free_delivery_count}} more prints to get free delivery!</h6>
                                     {% endif %}
+                                    <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                                 </td>
                             </tr>
                             <tr>
