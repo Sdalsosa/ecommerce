@@ -180,7 +180,9 @@ i:hover {
     right: 10px;
 }
 
-.btt-link {
+.btt-link,
+.update-cart,
+.remove-print {
     cursor: pointer;
 }
 

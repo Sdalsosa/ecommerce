@@ -22,7 +22,7 @@ def cart_content(request):
             'print': print,
         })
     
-    if print_count > 5:
+    if print_count > 4:
         delivery = 0
     else:
         delivery = 15
