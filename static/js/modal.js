@@ -1,3 +1,3 @@
 $(document).ready(function(){
-    $('#exampleModal').modal({show:true});
+    $('#mainModal').modal({show:true});
 });
