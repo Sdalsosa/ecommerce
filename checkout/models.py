@@ -34,8 +34,8 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
-        if self.order_total < 800:
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        if self.order_total < 1000:
             self.delivery_cost = 15
         else:
             self.delivery_cost = 0
@@ -70,4 +70,4 @@ class OrderLineItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'Print ID {self.print.sku} on order {self.order.order_number}'
+        return f'Print ID {self.print.id} on order {self.order.order_number}'

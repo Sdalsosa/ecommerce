@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+    <div class="mt-5 container mb-2">
+        <div class="row">
+            <div class="col text-center mb-5">
+                <h2 class="logo-font text-center text-neon-pink my-5">Thank You</h2>
+                <p class="text-white">Thank you for your order. You will shortly receive a confirmation email to <strong>{{ order.email }}</strong>.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center mb-5">
+            </div>
+        </div>
+
+
+    </div>
+{% endblock %}
