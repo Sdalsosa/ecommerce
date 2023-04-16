@@ -68,4 +68,5 @@ def remove_from_cart(request, pk):
         return HttpResponse(status=200)
 
     except Exception as e:
+        messages.error(request, f'Error removing {item.name} from your cart')
         return HttpResponse(status=500)
