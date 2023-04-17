@@ -5,4 +5,5 @@ urlpatterns = [
     path('', views.prints, name='prints'),
     path('<int:pk>/', views.single_print, name='single_print'),
     path('add/', views.add_print, name='add_print'),
+    path('edit/<int:pk>/', views.edit_print, name='edit_print'),
 ]

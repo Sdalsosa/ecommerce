@@ -8,6 +8,7 @@ from django.db.models import Count
 class PrintAdmin(admin.ModelAdmin):
     list_display = (
         'name',
+        'id',
         'stock',
         'price',
         'image',

@@ -31,7 +31,11 @@
                             {% for i in cart_prints %}
                                 <tr class="text-white text-center">
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ i.print.image.url }}">
+                                        {% if i.print.image %}
+                                            <img class="img-fluid rounded" src="{{ i.print.image.url }}" alt="{{ i.print.name }}">
+                                        {% else %}
+                                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ i.print.name }}">
+                                        {% endif %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ i.print.name }}</strong></p>

@@ -9,17 +9,17 @@
         <div class="row">
             <div class="col text-center mb-5">
                 <h2 class="logo-font text-center text-neon-pink my-5">Stock Management</h2>
-                <h2 class="text-white">Add A Print</h2>
+                <h2 class="text-white">Edit A Print</h2>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-12 bg-dark border-neon p-4 col-md-6">
-                <form method="POST" action="{% url 'add_print' %}" class="form text-white mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_print' print.id %}" class="form text-white mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
                         <a class="btn border-neon text-white" href="{% url 'prints' %}">Cancel</a>
-                        <button class="btn border-neon text-white" type="submit">Add Print</button>
+                        <button class="btn border-neon text-white" type="submit">Update Print</button>
                     </div>
                 </form>
             </div>            
