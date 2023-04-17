@@ -69,8 +69,18 @@ def single_print(request, pk):
 
 
 def add_print(request):
-    """ Add a print to the shop """
-    form = PrintForm()
+    """ Add a print to the store """
+    if request.method == 'POST':
+        form = PrintForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added print!')
+            return redirect(reverse('add_print'))
+        else:
+            messages.error(request, 'Failed to add print. Please ensure the form is valid.')
+    else:
+        form = PrintForm()
+        
     template = 'prints/add_print.html'
     context = {
         'form': form,
