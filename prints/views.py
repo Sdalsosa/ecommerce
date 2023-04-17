@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
 from django.db.models import Q
 from .models import Print, Category
+from .forms import PrintForm
 from django.db.models import Count
 from django.db.models.functions import Lower
 from django.http import HttpResponseRedirect
@@ -65,3 +66,14 @@ def single_print(request, pk):
     print = get_object_or_404(Print, pk=pk)
 
     return render(request, 'prints/single_print.html', {'print': print, })
+
+
+def add_print(request):
+    """ Add a print to the shop """
+    form = PrintForm()
+    template = 'prints/add_print.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

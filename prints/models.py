@@ -8,6 +8,7 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = "Categories"
+        
     name = models.CharField(max_length=254)
 
     def __str__(self):
