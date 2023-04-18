@@ -113,3 +113,13 @@ def edit_print(request, pk):
     }
 
     return render(request, template, context)
+
+
+def delete_print(request, pk):
+    """ Delete a print """
+
+    print = get_object_or_404(Print, pk=pk)
+    print.delete()
+    messages.success(request, 'Successfully deleted print!')
+
+    return redirect(reverse('prints'))
