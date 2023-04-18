@@ -207,8 +207,6 @@ i:hover {
     justify-content: center;
     margin: 0;
     height: 100%;
-    --fa-primary-color: #00b3ff;
-    --fa-secondary-color: #ff00f7;
 }
 
 /* ------  Stripe Styling  ------  */

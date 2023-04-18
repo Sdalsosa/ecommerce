@@ -13,3 +13,7 @@ def contactus(request):
     else:
         form = ContactUsForm()
     return render(request, 'contactus/contactus.html', {'form': form})
+
+
+def about(request):
+    return render(request, 'contactus/about.html')
