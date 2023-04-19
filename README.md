@@ -1,108 +1,316 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Wise Oak Bonsai
+![Neon Dreams](docs/images/amiresponsive.png)
 
-Welcome Al,
+## Portfolio 5 project as part of the Diploma in Full Stack Software Development by Code Institute.
+Neon Dreams is an e-commerce website that allows users to purchase a variety of neon canvas artworks.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The live link can be found here - https://neon-dreams.herokuapp.com/
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+# Contents
 
-## Gitpod Reminders
+* [Objective](<#objective>)
+* [User Experience UX](<#user-experience-ux>)
+    * [Target Audience](<#target-audience>)
+    * [User Stories](<#user-stories>)
+* [Design](<#design-choices>)
+    * [Colour Scheme](<#colour-scheme>)
+    * [Typography](<#typography>)
+* [Features](<#features>)
+    * [Flowchart](<#flowchart>)
+    * [Home Page](<#home-page>)
+    * [Prints Page](<#prints-page>)
+    * [Single Print Page](<#single-print-page>)
+    * [Shopping Cart](<#shopping-cart>)
+* [Future Features](<#future-features>)
+* [Technologies Used](<#technologies-used>)
+* [Testing](<#testing>)
+    * [Site Testing](<#site-testing>)
+    * [Bugs](<#bugs>)
+    * [Unfixed Bugs](<#unfixed-bugs>)
+    * [Validator Testing](<#validator-testing>)
+* [Deployment](<#deployment>)
+    * [Deployment to Heroku](<#deployment-to-heroku>)
+* [Marketing and SEO](#marketing-and-seo)
+* [E-Commerce Business Model](#e-commerce-business-model)
+* [Credits](<#credits>)
+    * [Developer Team](<#developer-team>)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# Objective:
 
-`python3 -m http.server`
+The main objectives are:
 
-A blue button should appear to click: _Make Public_,
+* ### Offer a wide variety of Neon Canvas Prints
+    One of the primary objectives of an Art selling e-commerce store is to offer a vast collection of neon canvas prints to its customers. This would allow customers to choose from a variety of subjects and styles to find the one that suits their preference.
+* ### Ensure secure transactions
+    Ensuring secure transactions is essential for any e-commerce store. Providing a secure payment gateway and protecting customers' sensitive information can help build trust and credibility.
 
-Another blue button should appear to click: _Open Browser_.
+[Back to top](<#contents>)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# User Experience (UX):
 
-A blue button should appear to click: _Make Public_,
+## Target Audience
 
-Another blue button should appear to click: _Open Browser_.
+- ### Art enthusiasts
+    People who are passionate about art and want to expand their collection would be a natural target audience for an art online store. They are likely to have some knowledge of art and may be interested in rare or exotic prints.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- ### Home owners 
+    Home owners who enjoy adding vibrant images to their living spaces could also be a target audience for a neon art online store. These customers may be interested in neon prints as a unique addition to their home or as a way to bring a mood to their indoor space.
 
-To log into the Heroku toolbelt CLI:
+- ### Gift shoppers
+    Canvas prints can make a thoughtful and unique gift for a special occasion or to show appreciation. The target audience for gift shoppers could include people looking for a gift for a loved one or corporate clients.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- ### Interior designers
+    Interior designers who want to add eye-catching elements to their design could be a target audience for a neon print online store. They may be interested in incorporating a print into their design projects for commercial or residential spaces.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- ### Collectors
+    Collectors who are interested in rare and exotic prints could also be a target audience for a neon print online store. These customers may be willing to pay a premium price for a unique print that is not found anywhere else.
 
-------
+## User Stories
 
-## Release History
+### New Visitor Goals
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* Understand what the site is about.
+* How to find a print they like
+* How to register
+* How to place an order
+* How to subscribe to a newsletter
+* Like a print
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Existing Visitor Goals
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+* Check new prints
+* Place an order
+* Check on their previous orders
+* Edit their profile
+* Like a print
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+[Back to top](<#contents>)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+# Design Choices
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Colour Scheme
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![Colour-scheme](docs/images/colors.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+The colour scheme used for this project was four colors to maintain a simple and clean look while staying consistent with the theme as the images themselves are very colorful 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* White #ffffff
+* Mauve #de9cf8
+* Electric Purple #53837a
+* Jet #2a2a2a
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Typography
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+The font used for the site was Poppins from google fonts.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+[Back to top](<#contents>)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+# Features
 
-------
+## Flowchart 
 
-## FAQ about the uptime script
+![Flowchart](docs/images/flowchart.png)
 
-**Why have you added this script?**
+## Home Page
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+The home page contains a nav bar with a search bar, menu items with dropdowns and the site logo. The body contains a link to the newsletter subsction page and a start shopping button to take the user to the store page. The footer contains a link to our facebook page.
 
-**How will this affect me?**
+![home](docs/images/home.png)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+## Prints Page
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+This page shows each of the print categories and shows the prins as listed as per the sorting chosen by the user. Each item can be clicked on to take the user to the single-print page.
+![Prints](docs/images/.png)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## Single Print Page
 
-**So….?**
+This page shows a single print and it's details allowing the site user to view a picture and learn more about it. They can also add it to their cart from this page and like it. As an admin, you will have the option to edit or delete the print. If delete is selected, a popup confirmation appears before deleting.
+![Single Print](docs/images/single-Bonsai.png)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Shopping Cart
 
-**Can I opt out?**
+This page shows the site user their shopping cart and lists the items they have added and the quantities and cost.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+![Shopping Cart](docs/images/cart.png)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+[Back to top](<#contents>)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+# Future Features
 
----
+* Stock management system to reorder once stock reaches a certain level
 
-Happy coding!
+
+[Back to top](<#contents>)
+
+# Technologies Used
+
+Here are a list of technologies used in this project
+
+- [GitHub](https://github.com/) Used to host website
+- [Gitpod](https://www.gitpod.io/) Used as IDE
+- [Git](https://git-scm.com/) Version control
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) 
+- [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics) 
+- [JavaScript](https://www.javascript.com/) 
+- [Coloors](https://coolors.co/) Used to display the color palette image in the readme.
+- [PEP8 Validator](http://pep8online.com/) Used to check python code for errors
+- [Font Awesome](https://fontawesome.com/) All icons throughout the page
+- [Elephand SQL](https://www.elephantsql.com/) Used for the PostgreSQL databases in the project
+- [Heroku](https://id.heroku.com/login) Used to deploy the project
+- [Lucid](https://lucid.co/) Used to design the flowchart
+- [Adobe Photoshop CS6](https://www.adobe.com/ie/products/photoshop.html) Used to create and edit images used for the readme.
+
+[Back to top](<#contents>)
+
+# Testing 
+
+I have spent many hours testing this site and had friends go through it for me also.
+
+This led to some issues being identified which are listed below.
+
+## Site Testing
+
+| TEST | OUTCOME | PASS / FAIL |
+|:---:|:---:|:---:|
+| Home page  | Page loads correctly and all links/dropdowns are active | PASS |
+| Search form | works correctly and triggers modal if empty | PASS |
+| Prints page | Page loads correctly and all links and sorting is active | PASS |
+| Single print page | Page loads correctly and all links are active | PASS |
+| Likes toggle | Likes toggle works when user is authenticated and increments and decreases accordingly | PASS |
+| Delete print | Delete button triggers confirmation box before deleting print | PASS |
+| About Us Page | Page loads correctly and all links are active | PASS |
+| Contact Us Page | Page loads correctly and form works as expected all links are active | PASS |
+| Newsletter Subscription | Page loads correctly and form works as expected all links are active | PASS |
+| My Account dropdown | Stock management link only shows for admin users | PASS |
+| Register Page | Page loads and form works correctly with verification and all links are active | PASS |
+| Sign In Option| Only available if not signed in| PASS |
+| Sign Out Option| Only available if signed in| PASS |
+| Sign In page| Page loads and form works correctly and all links are active and confirmation works | PASS |
+| Sign Out page| Page loads, button works and all links are active and confirmation works | PASS |
+| Cart Page | Page loads correctly and all links are active with correct quantitys, items and totals | PASS |
+| Checkout Page | Page loads correctly and all links are active and order completion with confirmation works | PASS |
+
+## Bugs
+
+* Whe using the contact us form, submitting the form was generating a Server 500 error - rectified by migrating db after small change.
+* When trying to create a new account, the account was being created but it would generate a server 500 error only on deployed site. It worked fine locally. Disabling verification was successful as a work around but I wanted to have the verification email as a confirmation and eventually found a mistake in the settings.py email settings that rectified the issue when corrected.
+* Loading overlay was failing to disappear when called. - resolved this by fixing an error in the JS code. 
+
+## Unfixed Bugs
+
+* To the best of my knowledge there are no further bugs present 
+
+## Validator Testing 
+
+#### JavaScript
+- All JavaScript code in the project was validated using ESLint https://eslint.org/
+  ![PEP8 Validation](docs/images/js-val.png)
+
+#### HTML Validation
+- HTML passed validation using the W3C Markup Validation Service https://validator.w3.org/
+  ![W3C](docs/images/html-val.png)
+
+#### CSS Validation
+- No errors were found when the single CSS file style.css was passed through the W3C Validation Service https://jigsaw.w3.org/css-validator/
+  ![W3C](docs/images/css-val.png)
+
+### Python Validation
+  - No errors were found when passing through the official PEP8 validator https://www.pythonchecker.com/
+  ![PEP8](docs/images/pep8-val.png)
+
+[Back to top](<#contents>)
+
+# Deployment
+
+## AWS S3 bucket for static storage.
+An AWS S3 bucket was utilised to store static and media files. The bucket is publicly accessible for downloading files to facilitate this use. 
+
+## Create an ElephantSQL PostgreSQL database
+* Create an ElephantSQL account or log into your exisiting account on the ElephantSQL website and signing up for an account. Follow the instructions to create a new database.
+* Install the ElephantSQL package in your Django project by running the command "pip install psycopg2"
+* Update your Django project settings.py file to use the ElephantSQL database. Make sure to keep the database URL in the env.py file.
+* Migrate the database using python manage.py migrate.
+* Runserver to see if the database connection is working correctly.
+
+## Deployment to Heroku
+
+* Log into Heroku or create an account if you don't already have one.
+* Click 'New' from the top right of the screen.
+* Select 'Create new app'.
+* Enter a unique application name - select appropriate region.
+* Click 'Create app'
+* On the following page, click the 'Settings' tab and scroll to Config Vars.
+* Enter the variables required for AWS, Stripe, ElephantSQL, Email and Secret Key
+* Create a Procfile in your project directory with gunicorn settings
+* Add Heroku project url to allowed hosts in settings .py.
+* At the top of the page, click 'Deploy'.
+* Select Github as the deployment method.
+* Search for and select correct repository and click 'Connect'.
+* At the bottom of the same page, select either Automatic Deployment or Manual Deployment 
+* Wait for your site to be deployed.
+
+[Back to top](<#contents>)
+
+
+# Marketing and SEO
+
+The SEO keywords that were mind mapped and researched resulted in the following 15 keywords and phrases
+
+- Neon canvas art
+- Custom neon canvas prints
+- Modern neon wall art
+- LED canvas prints
+- Neon signs on canvas
+- Personalized neon wall decor
+- Contemporary canvas prints
+- Bright neon artwork
+- Unique neon canvas prints
+- Neon light wall art
+- Vibrant neon canvas paintings
+- Affordable neon canvas art
+- High-quality neon canvas prints
+- Neon home decor
+- Eye-catching neon wall hangings.
+
+# E-Commerce Business Model
+
+    E-commerce business model refers to the process of buying and selling goods and services online. It typically involves a website or an online platform that allows businesses to showcase their products and services and allows customers to purchase them. With that in mind, the following considerations were taken into account when desiging the Neon Dreams website:
+
+### Online store: 
+The website gives us the ability to showcase our prints. It is designed to be user-friendly and provides customers with a smooth shopping experience.
+
+### Product catalog: 
+The prints that are offered for sale include a description, an image, and pricing information.
+
+### Shopping cart: 
+The cart allows customers to select prints they wish to purchase and stores them while they continue to shop. It helps customers keep track of what they have selected and the total cost of their purchases.
+
+### Payment gateway: 
+Th stripe payment system utilised in this project allows us to accept payments online securely. 
+
+### Fulfillment: 
+Not in the scope of this project
+
+### Customer service: 
+Not in the scope of this project but we do have a contact us form.
+
+Overall, the e-commerce business model is designed to provide a platform to reach a wider customer base and provide customers with a convenient and seamless shopping experience.
+
+# Credits
+
+[Python Documentation](https://docs.python.org/3/) 
+
+[Code Institute](https://learn.codeinstitute.net/) 
+
+[Stack Overflow](https://stackoverflow.com/) 
+
+[Back to top](<#contents>)
+
+## Developer
+
+* Alan Egan - Junior Software Developer at Code Institute
+
+[Back to top](<#contents>)
