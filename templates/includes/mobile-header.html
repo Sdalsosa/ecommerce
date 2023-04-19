@@ -41,10 +41,10 @@
     </div>
 </li>
 <li class="list-inline-item">
-    <a class="{% if grand_total %}text-neon-pink font-weight-bold{% else %}text-white{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
+    <a class="{% if grand_total %}text-neon-pink {% else %}text-white{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
         <div class="text-center">
             <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-            <p class="my-0">
+            <p class="my-0 text-white">
                 {% if grand_total %}
                     €{{ grand_total|floatformat:2 }}
                 {% else %}
