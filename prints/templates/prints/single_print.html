@@ -42,19 +42,21 @@
                         {% endif %}
                     </div>
                     <div class="col">
-                        <p class="lead mb-0 text-right text-white font-weight-bold">
-                            {% if print.likes %}
+                        <p class="lead mb-0 text-white font-weight-bold">
+                        {% if request.user.is_authenticated %}
+                            <form action="{% url 'like_print' print.pk %}" method="POST" class="text-right">
+                                {% csrf_token %}
                                 <small class="font-weight-bold"></i>{{ print.likes.count }}</small>
-                            {% else %}
-                                <small class="font-weight-bold">0</small>
-                            {% endif %}
-                            <i class="fa fa-heart heart-neon-pink ml-1" aria-hidden="true"></i>
-                            {% if request.user.is_superuser %}
-                                <small class="ml-3">
-                                    <a href="{% url 'edit_print' print.id %}">Edit</a> | 
-                                    <a class="text-danger" href="{% url 'delete_print' print.id %}">Delete</a>
-                                </small>
-                            {% endif %}
+                                <button type="submit", name="print_id", value="{{ print.id }}", class="darker-bg border-0">
+                                    <i class="fa fa-heart heart-neon-pink ml-1" aria-hidden="true"></i>
+                                </button>
+                            </form>
+                        {% else %}
+                            <div class="text-right">
+                                <small class="font-weight-bold"></i>{{ print.likes.count }}</small>
+                                <i class="fa fa-heart heart-neon-pink ml-1" aria-hidden="true"></i>
+                            </div>
+                        {% endif %}
                         </p> 
                     </div>
                 </div>
@@ -97,6 +99,14 @@
                                     </span>
                                     <span class="text-uppercase text-white">Back to Shop</span>
                                 </a>
+                            </div>
+                            <div class="pt-3">
+                                {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_print' print.id %}">Edit</a> | 
+                                        <a class="text-danger" href="{% url 'delete_print' print.id %}">Delete</a>
+                                    </small>
+                                {% endif %}
                             </div>
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
