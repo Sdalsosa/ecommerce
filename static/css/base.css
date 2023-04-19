@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background: url(/media/background.png) no-repeat center center fixed;
+    background: url(/media/background.jpg) no-repeat center center fixed;
     background-size: cover;
     font-family: 'Poppins';
 }
@@ -16,7 +16,7 @@ a {
   }
 
 a:hover {
-    color: #de9cf8;
+    color: #0059ff;
 
 }
 
@@ -30,7 +30,7 @@ i {
 }
 
 i:hover {
-    color:#de9cf8;
+    color:#0059ff;
 }
 
 .dropdown-menu {
@@ -39,7 +39,7 @@ i:hover {
 
 .dropdown-menu a:hover {
     background-color: transparent;
-    color: #de9cf8 !important;
+    color: #0059ff !important;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -264,7 +264,7 @@ select option[value=""] {
 /* ------  Works on Firefox  ------ */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #de9cf8 #be20fc;
+    scrollbar-color: #0059ff #be20fc;
   }
   
   /* ------ Works on Chrome, Edge, and Safari ------ */
