@@ -15,4 +15,4 @@ def like(request, pk):
         print.likes.add(request.user)
         liked = True
 
-    return HttpResponseRedirect(reverse('single_print', args=[str(pk)]))
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

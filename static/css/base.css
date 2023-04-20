@@ -276,6 +276,10 @@ select option[value=""] {
     padding-left: 20px;
 }
 
+#cart-width {
+    max-width: 1150px;
+}
+
 /* ------  Scrollbar Styling  ------  */
 
 /* ------  Works on Firefox  ------ */

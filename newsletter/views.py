@@ -8,7 +8,7 @@ def subscribe(request):
         form = SubscriberForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Thank you for Subscribing - Use code "WELCOME10" for 10% off your first order!')
+            messages.success(request, f'Thank you for Subscribing - Use code "WELCOME50" for €50 off your first order!')
             return redirect('home')
     else:
         form = SubscriberForm()

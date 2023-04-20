@@ -14,7 +14,7 @@
         </div>
 
         <div class="row">
-            <div class="d-flex justify-content-center col">
+            <div id="cart-width" class="d-flex justify-content-center col">
                 {% if cart_prints %}
                     <div class="table-responsive bg-dark border-neon p-sm-2 p-5">
                         <table class="table table-sm table-borderless">
@@ -83,7 +83,7 @@
                                     <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
                                     {% if total < 1000 %}
-                                        <h6>Spend {{free_delivery}} more to get free delivery!</h6>
+                                        <h6>Spend €{{free_delivery}} more to get free delivery!</h6>
                                     {% endif %}
                                     <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                                 </td>

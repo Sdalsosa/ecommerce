@@ -41,6 +41,7 @@ def cart_content(request):
         'cart_prints': cart_prints,
         'total': total,
         'delivery': delivery,
+        'free_delivery': free_delivery,
         'grand_total': grand_total,
     }
 
