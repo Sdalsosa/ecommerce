@@ -31,6 +31,6 @@ urlpatterns = [
     path('likes/', include('likes.urls')),
     path('newsletter/', include('newsletter.urls')),
 
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'exommerce_site.views.error404'
+handler404 = 'ecommerce_site.views.error404'
