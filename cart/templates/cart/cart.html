@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row justify-content-center">
             <div id="cart-width" class="d-flex justify-content-center col">
                 {% if cart_prints %}
                     <div class="table-responsive bg-dark border-neon p-sm-2 p-5">
@@ -32,9 +32,9 @@
                                 <tr class="text-white text-center">
                                     <td class="p-3 w-25">
                                         {% if i.print.image %}
-                                            <img class="img-fluid rounded" src="{{ i.print.image.url }}" alt="{{ i.print.name }}">
+                                            <img class="img-fluid border-neon" src="{{ i.print.image.url }}" alt="{{ i.print.name }}">
                                         {% else %}
-                                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ i.print.name }}">
+                                            <img class="img-fluid border-neon" src="{{ MEDIA_URL }}noimage.png" alt="{{ i.print.name }}">
                                         {% endif %}
                                     </td>
                                     <td class="py-3">
