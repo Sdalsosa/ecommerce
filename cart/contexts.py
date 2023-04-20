@@ -9,6 +9,7 @@ def cart_content(request):
     cart_prints = []
     total = 0
     print_count = 0
+    free_delivery = 0
     cart = request.session.get('cart', {})
 
     for id, quant in cart.items():
@@ -21,6 +22,11 @@ def cart_content(request):
             'print': print,
         })
     
+    if total < 1000:
+        free_delivery = 1000 - total
+    else:
+        free_delivery = 0
+
     if total > 1000:
         delivery = 0
     else:
