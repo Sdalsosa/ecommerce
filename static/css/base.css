@@ -362,11 +362,11 @@ input[type=number] {
 
 @media (max-width: 450px) {
     .fas, .fas p {
-        scale: 60%;
+        scale: 75%;
     }
 
     .navbar a {
-        font-size: 0.5rem;
+        font-size: 0.75rem;
     }
 }
 
