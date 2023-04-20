@@ -118,9 +118,9 @@
                     {% for message in messages %}
                         <div class="card no-bg border-neon">
                             {% if message.tags == 'success' %}
-                                <img src="{% static 'images/success.png' %}" alt="">
+                                <img src="{% static 'images/success.png' %}" alt="success neon image">
                             {% else %}
-                                <img src="{% static 'images/error.png' %}" alt="">
+                                <img src="{% static 'images/error.png' %}" alt="error neon image">
                             {% endif %}
                         </div>
                         <div class="modal-body no-bg ">
