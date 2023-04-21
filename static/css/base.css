@@ -367,6 +367,9 @@ input[type=number] {
         font-size: 90%;
     }
 
+    #messages-cont {
+        font-size: 70%;
+    }
     
 }
 
@@ -390,10 +393,14 @@ input[type=number] {
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 315px) {
     .narrow-screen-text {
         font-size: 1rem;
         justify-content: center;
+    }
+
+    #messages-cont {
+        font-size: 50%;
     }
 }
 
