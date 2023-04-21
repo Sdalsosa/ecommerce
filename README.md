@@ -434,7 +434,7 @@ A Facebook page was created for the site for marketing purposes. This will be us
 
 [Python Documentation](https://docs.python.org/3/) 
 
-[Code Institute](https://learn.codeinstitute.net/) 
+[Code Institute](https://learn.codeinstitute.net/) - This project was built based on the Boutique Ado walkthrough project
 
 [Stack Overflow](https://stackoverflow.com/) 
 
