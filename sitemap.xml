@@ -9,102 +9,207 @@
 
 <url>
   <loc>https://neon-dreams.herokuapp.com/</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/accounts/signup/</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/accounts/login/</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/cart/</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://neon-dreams.herokuapp.com/prints/</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/prints/?sort=price&amp;direction=asc</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/prints/?sort=likes</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/contactus/about/</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/contactus/contactus/</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/newsletter/subscribe/</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/accounts/password/reset/</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/prints/?category=Animals</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/prints/?category=Landscapes</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/prints/?category=Plants</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/prints/?category=Space</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/prints/1/</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://neon-dreams.herokuapp.com/prints/3/</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <loc>https://neon-dreams.herokuapp.com/prints/18/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/28/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/prints/5/</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://neon-dreams.herokuapp.com/prints/6/</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <loc>https://neon-dreams.herokuapp.com/prints/26/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/11/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://neon-dreams.herokuapp.com/prints/4/</loc>
-  <lastmod>2023-04-19T16:04:08+00:00</lastmod>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/12/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/14/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/17/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/20/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/22/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/23/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/27/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/15/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/16/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/19/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/25/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/21/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/10/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/3/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/13/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/6/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/24/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/9/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-dreams.herokuapp.com/prints/8/</loc>
+  <lastmod>2023-04-21T00:53:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
