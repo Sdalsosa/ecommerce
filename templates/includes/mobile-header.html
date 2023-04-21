@@ -31,6 +31,7 @@
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
             <a href="{% url 'add_print' %}" class="text-white dropdown-item">Stock Management</a>
+            <a href="{% url 'messages' %}" class="text-white dropdown-item">Messages</a>
             {% endif %}
             <a href="{% url 'profile' %}" class="text-white dropdown-item">My Profile</a>
             <a href="{% url 'account_logout' %}" class="text-white dropdown-item">Logout</a>
