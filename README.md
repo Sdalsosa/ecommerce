@@ -334,19 +334,17 @@ This led to some issues being identified which are listed below.
 
 #### JavaScript
 - All JavaScript code in the project was validated using ESLint https://eslint.org/
-  ![PEP8 Validation](docs/images/js-val.png)
 
 #### HTML Validation
-- HTML passed validation using the W3C Markup Validation Service https://validator.w3.org/
-  ![W3C](docs/images/html-val.png)
+- HTML showed some errors when using the W3C Markup Validation Service https://validator.w3.org/
+  These errors were related to the nav elements duplication between desktop and mobile views which was expected.
 
 #### CSS Validation
-- No errors were found when the single CSS file style.css was passed through the W3C Validation Service https://jigsaw.w3.org/css-validator/
-  ![W3C](docs/images/css-val.png)
+- Some errors were found when the single CSS file style.css was passed through the W3C Validation Service https://jigsaw.w3.org/css-validator/ These errors are false errors as scale is a valid css function.
 
 ### Python Validation
   - No errors were found when passing through the official PEP8 validator https://www.pythonchecker.com/
-  ![PEP8](docs/images/pep8-val.png)
+  ![PEP8](docs/images/pep8.png)
 
 [Back to top](<#contents>)
 
