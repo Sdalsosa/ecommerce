@@ -44,7 +44,7 @@
             <div class="row">
                 {% for print in prints %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
-                        <div class="card h-100 border-neon rounded-0">
+                        <div class="card h-100 border-neon">
                             {% if print.image %}
                             <a href="{% url 'single_print' print.pk %}">
                                 <img class="card-img-top img-fluid" src="{{ print.image.url }}" alt="{{ print.name }}">

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+    <div class="mt-5 container mb-2">
+        <div class="row">
+            <div class="col text-center mb-5">
+                <h2 class="logo-font text-center text-neon-pink my-5">Messages</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6 bg-dark border-neon">
+                <h4 class="text-white text-center p-4">Received inquiries</h4>
+                <div class="table-responsive">
+                    <table class="table table-sm text-center text-white table-borderless">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Subject</th>
+                                <th>Received</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for message in message_list %}
+                                <tr>
+                                    <td>
+                                        <a class="text-neon-pink" href="{% url 'single_message' message.pk %}"> {{ message.name }}</a>
+                                    </td>
+                                    <td>
+                                        {{ message.email }}
+                                    </td>
+                                    <td>
+                                        {{ message.subject }}
+                                    </td>
+                                    <td>
+                                        {{ message.created_at }}
+
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div> 
+        </div> 
+{% endblock %}

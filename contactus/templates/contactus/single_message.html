@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+    <div class="mt-5 container mb-2">
+        <div class="row">
+            <div class="col text-center mb-5">
+                <h2 class="logo-font text-center text-neon-pink my-5">Message</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6 bg-dark border-neon">
+                <h4 class="text-white text-center p-4">Received Contact Us Message</h4>
+                <p class="text-white">Name: {{ single_message.name }}</p>
+                <p class="text-white">Received: {{ single_message.created_at }}</p>
+                <p class="text-white">Email: {{ single_message.email }}</p>
+                <p class="text-white">Subject: {{ single_message.subject }}</p>
+                <p class="text-white">Message: <br> {{ single_message.message }}</p>
+                <a href="{% url 'delete_message' single_message.pk %}" class ="btn confirm-delete my-4 border-neon text-white text-uppercase">Delete</a>
+                
+            </div> 
+        </div> 
+{% endblock %}
+
+{% block postloadjs %}
+<script src="{% static 'js/confirm-delete.js' %}"></script>
+{% endblock %}
